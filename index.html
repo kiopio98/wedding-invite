@@ -434,26 +434,41 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
-
-        .color {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+        
+        .color-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90px; /* ширина элемента */
+        }
+        
+        .color-swatch {
+            width: 100%;
+            height: 80px; /* вытянутый вверх прямоугольник */
+            border-radius: 12px 12px 0 0; /* закруглены только верхние углы */
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
-
-        .color:hover {
-            transform: scale(1.2);
+        
+        .color-swatch:hover {
+            transform: scale(1.05); /* небольшое увеличение при наведении (можно убрать) */
         }
-
-        .color1 { background: #F0F1EC; }
-        .color2 { background: #D9D2C9; }
-        .color3 { background: #F9EFE9; }
-        .color4 { background: #E2CDC2; }
-        .color5 { background: #654C3E; }
-        .color6 { background: #BDC0C6; }
-        .color7 { background: #96986F; }
+        
+        .color-label {
+            margin-top: 5px;
+            font-size: 0.8em;
+            color: #666;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+        
+        /* Цвета для каждого прямоугольника */
+        .color1 .color-swatch { background: #F0F1EC; }
+        .color2 .color-swatch { background: #F9EFE9; }
+        .color3 .color-swatch { background: #E2CDC2; }
+        .color4 .color-swatch { background: #654C3E; }
+        .color5 .color-swatch { background: #BDC0C6; }
+        .color6 .color-swatch { background: #96986F; }
 
         /* Фото с иконками */
         .photo-with-icons {
@@ -681,13 +696,30 @@
         <p style="font-size: 1.2em;">Но кто придет не по дресс-коду будет в ЧС 😂<br> Главное исключение — черный и белый цвет</p>
         <p style="font-size: 1.2em;">Поэтому мы будем очень рады, если вы поддержите цветовую гамму нашей свадьбы. Особенности локации предполагают следующие цвета:</p>
         <div class="palette">
-            <div class="color color1"></div>
-            <div class="color color2"></div>
-            <div class="color color3"></div>
-            <div class="color color4"></div>
-            <div class="color color5"></div>
-            <div class="color color6"></div>
-            <div class="color color7"></div>
+            <div class="color-item color1">
+                <div class="color-swatch"></div>
+                <div class="color-label">#F0F1EC</div>
+            </div>
+            <div class="color-item color2">
+                <div class="color-swatch"></div>
+                <div class="color-label">#F9EFE9</div>
+            </div>
+            <div class="color-item color3">
+                <div class="color-swatch"></div>
+                <div class="color-label">#E2CDC2</div>
+            </div>
+            <div class="color-item color4">
+                <div class="color-swatch"></div>
+                <div class="color-label">#654C3E</div>
+            </div>
+            <div class="color-item color5">
+                <div class="color-swatch"></div>
+                <div class="color-label">#BDC0C6</div>
+            </div>
+            <div class="color-item color6">
+                <div class="color-swatch"></div>
+                <div class="color-label">#96986F</div>
+            </div>
         </div>
     </div>
 
@@ -796,4 +828,5 @@
 </body>
 
 </html>
+
 
